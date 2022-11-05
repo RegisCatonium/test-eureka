@@ -1,0 +1,633 @@
+@import config
+
+.title
+	font-size: 3.6rem
+	font-weight: 700
+	line-height: 4.4rem
+
+.btn, a.btn, button.btn
+	display: inline-block
+	padding: 1.4rem 1.4rem
+	font-size: 1.3rem
+	font-weight: 600
+	line-height: 1.48
+	text-align: center
+	background-color: $accent
+	color: #fff
+	border: 2px solid rgba($accent, 0)
+	transition: all .3s linear
+	&:hover
+		color: $accent
+		background-color: transparent
+		border: 2px solid rgba($accent, .8)
+
+.header-top
+	display: flex
+	justify-content: space-between
+	padding: 2.4rem 12rem
+
+	&__logo
+		width: 22rem
+		height: 4.4rem
+
+	&__list
+		display: flex
+		align-items: center
+		list-style: none
+		margin: 0
+		padding: 0
+		&-item:first-child
+			margin-right: 3.5rem
+		& .btn
+			min-width: 17.6rem
+	&__tel
+		font-size: 1.8rem
+		font-weight: 600
+		color: $textcolor
+		&::before
+			content: '\e907'
+			font-size: 1.5rem
+			font-family: icomoon
+			margin-right: 1.2rem
+	&__link-hum
+		&::before
+			content: '\e906'
+			font-family: icomoon
+			color: $textwhite
+			margin-right: 1rem
+			font-size: 1.5rem
+			line-height: 0
+			transition: 
+		&:hover::before
+			color: $accent
+			transition: all .3s linear
+
+.nav
+	padding: 0 12rem
+	background-color: $bggray
+	&__list
+		display: flex
+		list-style-type: none
+		margin: 0
+		padding: 0
+	&__item
+		padding: 1.6rem 0
+		position: relative
+		transition: background-color .3s ease-in
+		&:hover
+			background-color: lighten(#000, 80%)
+			>.subnav
+				display: block
+
+	&__link
+		display: block
+		padding: 0 2rem
+		font-size: 1.5rem
+		font-weight: 600
+		line-height: 1.4
+		color: $textcolor
+		transition: background-color .3s ease-in
+
+.subnav
+	display: none
+	width: 100%
+	padding: 0
+	position: absolute
+	top: 100%
+	left: 0
+	background-color: #fff
+	border-radius: 0 0 5px 5px
+	box-shadow: 0 6px 8px rgba(#000, .2)
+	z-index: 100
+	&__link
+		display: block
+		font-size: 1.4rem
+		line-height: 1
+		color: $accent
+		text-decoration: none
+		transition: background-color .3s ease-in
+	&__item
+		display: block
+		padding: 1.4rem 2rem
+		transition: background-color .2s ease-in
+		&:last-child
+			padding-bottom: 1.2rem
+		&:hover
+			background-color: lighten(#000, 80%)
+.has-subnav::after
+	content: '\e900'
+	font-family: icomoon
+	font-size: 1.1rem
+	margin-left: .8rem
+
+.delivery
+	padding: 9rem 16rem 5rem
+
+	&__title
+		margin-bottom: 4.8rem
+		font-size: 4.8rem
+		font-weight: 700
+
+.form
+	padding: 4.9rem 19.2rem 4.3rem 9.6rem
+	box-shadow: 0px 4px 30px rgba(#000, 0.1)
+
+	&__title
+		margin-bottom: 3rem
+		font-size: 3.6rem
+		font-weight: 700
+		span
+			color: $accent
+	&__content
+		display: flex
+		align-items: flex-end
+		gap: 1.4rem
+		margin-bottom: 3rem
+	&__item
+		display: flex
+		flex-direction: column
+	&__label
+		margin-bottom: .8rem
+		font-size: 1.2rem
+		font-weight: 500
+		line-height: 1
+	&__input
+		width: 27.3rem
+		padding: 1.3rem 1.5rem 1.6rem
+	& .btn
+		width: 100%
+
+.checkbox
+	position: relative
+	&__input
+		appearance: none
+		position: absolute
+		&:checked + .checkbox__label::after
+			opacity: 1
+	&__label
+		font-size: 1.4rem
+		padding-left: 3.8rem
+		&::before
+			content: ''
+			display: block
+			width: 2.2rem
+			height: 2.2rem
+			border: 1px solid #D4D4D4
+			background-color: $bggray
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+		&::after
+			content: '\e902'
+			object-fit: cover
+			text-align: center
+			display: block
+			width: 2.4rem
+			font-size: 1.4rem
+			font-family: icomoon
+			position: absolute
+			opacity: 0
+			top: 0
+			left: 0
+			z-index: 2
+
+.price
+	padding: 5rem 16rem 10rem
+	.title
+		margin-bottom: 4.8rem
+
+	&-content
+		display: grid
+		grid-template-columns: 16.3rem 28.6rem 32rem 18.7rem 16.4rem
+		grid-template-rows: 4.8rem 2rem repeat(5, 4.8rem) 2rem repeat(8, 4.8rem)
+		&__header
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 1.3rem
+			font-weight: 600
+			line-height: 1.6rem
+			color: $textwhite
+			background-color: $bgcolor
+		&__left
+			padding-top: 1.6rem
+			padding-left: 2rem
+			font-size: 2.4rem
+			font-weight: 700
+			line-height: 2.9rem
+			color: $textwhite
+			&-dt
+				grid-column: 1/2
+				grid-row: 3 / span 5
+				background-color: $accent
+			&-ai
+				grid-column: 1/2
+				grid-row: 9 / span 8
+				background-color: $accent
+
+		&__item
+			display: flex
+			align-items: center
+			padding-left: 2rem
+			border-top: 1px solid rgba(#000, .5)
+			font-size: 1.3rem
+			font-weight: 600
+			line-height: 1.6rem
+			&_pos-top
+				padding-top: 1.6rem
+				align-items: flex-start
+				border-right: 1px solid rgba(#000, .5)
+			&_b-bot
+				border-bottom: 1px solid rgba(#000, .5)
+			&_b-right
+				border-right: 1px solid rgba(#000, .5)
+			&-8
+				grid-column: 2/3
+				grid-row: 3 / span 3
+			&-9
+				grid-column: 2/3
+				grid-row: 6 / span 2
+			&-10
+				grid-column: 2/3
+				grid-row: 9 / span 3
+			&-11
+				grid-column: 2/3
+				grid-row: 12 / span 2
+			&-12
+				grid-column: 2/3
+				grid-row: 14 / span 3
+		&__gap-1
+			grid-row: 2
+			grid-column: span 5
+		&__gap-2
+			grid-row: 8
+			grid-column: span 5
+// --price
+
+.calc
+	padding: 7.4rem 16rem
+	background-color: $bggray
+	& .title
+		margin-bottom: 3.4rem
+	&__content
+		display: flex
+		gap: 7.1rem
+	&-left
+		width: 40.9rem
+		display: flex
+		flex-direction: column
+		gap: 1.6rem
+		&__label
+			margin-bottom: .8rem
+			font-size: 1.2rem
+			font-weight: 500
+		&__input
+			width: 100%
+			padding: 1.3rem 1.5rem 1.6rem
+			border: 1px solid #D5D5D5
+			outline: none
+			&_sel
+				appearance: none
+		&__select
+			position: relative
+			&::after
+				content: '\e900'
+				font-family: icomoon
+				font-size: 1.3rem
+				position: absolute
+				top: 1.3rem
+				right: 1.5rem
+		&__wrap
+			position: relative
+		&__slider
+			width: 100%
+			height: 2px
+			background-color: #E1E1E1
+			position: absolute
+			bottom: 0
+			left: 0
+
+.noUi-handle
+	box-shadow: none
+	&::before, &::after
+		display: none
+.noUi-connect
+	background: $accent
+.noUi-target
+	border: none
+.noUi-horizontal .noUi-handle
+	height: 1.6rem
+	width: 1.6rem
+	position: absolute
+	top: -0.8rem
+	right: -0.8rem
+	border: none
+	border-radius: 50%
+	background-color: $accent
+	cursor: pointer
+// calc-left
+
+.calc-right
+	width: 63.8rem
+	padding: 4rem
+	box-shadow: 0px 4px 30px rgba(#000, 0.1)
+	&__title
+		margin-bottom: 1.6rem
+		font-size: 2.4rem
+		font-weight: 500
+		line-height: 2.9rem
+
+	&__item
+		display: flex
+		justify-content: space-between
+		padding: 1.6rem 0
+		border-top: 1px solid #e7e7e7
+	&__text
+		font-size: 1.6rem
+		line-height: 1.4
+		span
+			display: block
+			max-width: 34.6rem
+			font-size: 1.2rem
+			line-height: 1.5rem
+			color: #565656
+	& .btn
+		width: 25.8rem
+		margin-top: 1.6rem
+// calc-right
+
+.work
+	padding: 10rem 16rem
+	& .title
+		margin-bottom: 4.8rem
+	&__wrap
+		display: flex
+		gap: 3.1rem
+	&-card
+		width: 35.3rem
+		padding: 3rem
+		background-color: $bgcolor
+		color: $textwhite
+		&__top
+			display: flex
+			justify-content: space-between
+			margin-bottom: 3rem
+		&__icon
+			display: block
+			font-size: 6.4rem
+		&__time
+			font-size: 1.5rem
+			font-weight: 600
+			line-height: 1.8rem
+			position: relative
+			&::after
+				content: ''
+				display: block
+				width: 5.9rem
+				height: 1.4rem
+				margin-top: 1.7rem
+				background-image: url(../images/icon/arr.svg)
+				background-repeat: no-repeat
+				background-size: contain
+			&_last::after
+				display: none
+		&__title
+			font-size: 2.1rem
+			font-weight: 500
+			line-height: 2.6rem
+			margin-bottom: 2.4rem
+		&__text
+			font-size: 1.6rem
+			line-height: 1.4
+			&_m
+				margin-top: 1rem
+				font-size: 1.2rem
+// work
+
+.advantage
+	padding: 8rem 16rem 4.2rem
+	background-color: $bggray
+	.title
+		margin-bottom: 4.8rem
+	&__content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&-card
+		display: flex
+		gap: 1.9rem
+		width: 35.3rem
+		height: 13.8rem
+		padding: 2rem
+		margin-bottom: 3rem
+		background-color: #fff
+		overflow: hidden
+		&__icon
+			font-size: 4.8rem
+		&__title
+			margin-bottom: 1.2rem
+			font-size: 1.5rem
+			font-weight: 600
+			line-height: 1.8rem
+		&__text
+			line-height: 1.7rem
+			color: #565656
+// advantage
+
+.certificate
+	width: 115.1rem
+	padding: 10rem 0 5rem
+	.title
+		margin-bottom: 4.8rem
+		margin-left: 3rem
+	&__item
+		box-sizing: content-box
+		&:first-child
+			margin-left: 3rem
+	&__img
+		width: 21.7rem
+		height: 100%
+		padding: 2.8rem 2rem
+		box-shadow: 0px 4px 30px rgba(#000, 0.1)
+	& .btn-prev
+		top: 11rem
+		right: 9rem
+		left: auto
+	& .btn-next
+		top: 11rem
+		right: 1.9rem
+.btn-prev, .btn-next
+	width: 5.6rem
+	height: 5.6rem
+	border: 1px solid #D5D5D5
+	&::after
+		content: '\e900'
+		font-family: icomoon
+		font-size: 1.8rem
+		color: #000
+.btn-prev
+	&::after
+		transform: rotate(90deg)
+.btn-next::after
+	transform: rotate(-90deg)
+// certificate
+
+.partners
+	width: 112rem
+	padding: 5rem 0 15.2rem
+	.title
+		margin-bottom: 2.2rem
+	&__content
+		padding-bottom: 4.8rem
+		margin-bottom: 2rem
+		border-bottom: 1px solid #E7E7E7
+	&__item
+		align-self: flex-end
+	&__pagination
+		margin-bottom: 10rem
+	&__pagination .swiper-pagination-bullet
+		height: 4px
+		width: 4px
+		margin-right: 4.8rem !important
+		background-color: #D0D0D0
+		transition: all .3s ease
+		opacity: 1
+		&-active
+			background-color: $accent
+			transform: scale(2)
+// partners
+
+.reviews
+	display: flex
+	flex-direction: column
+	padding: 8rem 16rem 8rem
+	background-color: $bggray
+	position: relative
+	&__content
+		width: 112rem
+	& .title
+		margin-bottom: 4.8rem
+	&__item
+		min-height: 36.8rem
+		padding: 4rem
+		padding-bottom: 7.5rem
+		background-color: #fff
+		position: relative
+	&__name
+		margin-bottom: 4rem
+		font-size: 1.5rem
+		font-weight: 600
+		line-height: 1.8rem
+		& span
+			display: block
+			max-width: 24.6rem
+			margin-top: 1.2rem
+			font-size: 1.2rem
+			font-weight: 500
+			line-height: 1.5rem
+			color: #565656
+	&__text
+		font-size: 1.6rem
+		line-height: 1.4
+
+	&__link
+		font-size: 1.3rem
+		font-weight: 600
+		line-height: 1.6rem
+		color: $accent
+		position: absolute
+		bottom: 4rem
+
+	& .btn-prev
+		top: 9.6rem
+		right: 22.9rem
+		left: auto
+	& .btn-next
+		top: 9.6rem
+		right: 16rem
+
+	& .btn
+		width: 25.8rem
+		margin-top: 4.4rem
+		align-self: center
+// reviews
+
+.feedback
+	padding: 9rem 16rem
+	background-color: $bgcolor
+	text-align: center
+	color: $textwhite
+	&__title
+		font-size: 3.6rem
+		font-weight: 700
+		margin-bottom: 3rem
+	&__text
+		display: block
+		margin: 0 auto
+		max-width: 60rem
+		margin-bottom: 3rem
+	&-form
+		display: flex
+		justify-content: space-between
+		width: 83.5rem
+		margin: 0 auto
+		&__input
+			width: 28.5rem
+			padding: 1.3rem
+			font-weight: 600
+	.btn
+		width: 20rem
+	&__bot-text
+		margin-top: 2rem
+		font-size: 1.3rem
+	&__link
+		font-size: inherit
+		color: inherit
+		border-bottom: 1px solid #fff
+// .feedback
+
+.footer
+	height: 24.5rem
+	padding: 5rem 16rem 5rem
+	background-color: $bggray
+	position: relative
+	&__content
+		display: flex
+		justify-content: space-between
+		padding-bottom: 4rem
+	&__item
+		display: flex
+		flex-direction: column
+		flex-basis: 21rem
+		&:first-child
+			flex-basis: 39rem
+	&__logo
+		width: 20rem
+	&__logo-span
+		margin-top: 2rem
+		color: #6D757D
+	&__link
+		font-size: 1.6rem
+		font-weight: 500
+		color: $textcolor
+	&__sales
+		font-size: 1.6rem
+		font-weight: 600
+		color: $textcolor
+	&__sales-tel
+		font-size: 1.8rem
+		font-weight: 700
+		color: #079AD5
+	&__bottom
+		width: 100%
+		height: 5rem
+		padding-left: 16rem
+		background-color: #fff
+		position: absolute
+		left: 0
+		bottom: 0
+	&__privacy-policy
+		line-height: 5rem
+
+@import media

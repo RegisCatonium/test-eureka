@@ -1,0 +1,369 @@
+@media only screen  and (max-width : 600px)
+	html
+		font-size: calc(100vw/320*10)
+
+	.title
+		font-size: 2.2rem
+		line-height: 1.1
+	.btn, a.btn, button.btn
+		padding: 1.1rem .55rem
+		font-size: 1.1rem
+
+	.header-top
+		padding: 2rem 1.5rem
+		&__logo
+			width: 10rem
+		&__list
+			gap: .15rem
+			&-item:first-child
+				margin-right: .5rem
+			& .btn
+				min-width: 2rem
+				font-size: .75rem
+		&__tel
+			display: none
+		&__link-hum::before
+			font-size: .8rem
+			margin-right: .5rem
+
+	.nav
+		padding: 0 1.5rem
+		&__list
+			overflow-x: scroll
+			&::-webkit-scrollbar
+				width: 0
+				height: 0
+		&__item
+			padding: .6rem 0
+			position: relative
+			white-space: nowrap
+			&:hover>.subnav
+				display: none
+
+		&__link
+			display: inline-block
+			padding: 0 1rem
+			font-size: .8rem
+			line-height: 1.1
+
+	.has-subnav::after
+		font-size: .6rem
+		margin-left: .4rem
+
+	.delivery
+		padding: 2rem 1.5rem
+		&__title
+			margin-bottom: 2.4rem
+			font-size: 2.8rem
+
+	.form
+		padding: 2rem 1.5rem
+		&__title
+			margin-bottom: 2rem
+			font-size: 2.4rem
+			line-height: 1.2
+			span
+				color: $accent
+		&__content
+			flex-direction: column
+			gap: 1.4rem
+			margin-bottom: 1.5rem
+		&__item
+			width: 100%
+		&__label
+			margin-bottom: .6rem
+			font-size: 1.1rem
+		&__input
+			width: 100%
+			font-size: 1.3rem
+			padding: .75rem .85rem .9rem
+		& .btn
+			width: 100%
+			font-size: 1.1rem
+
+	.checkbox
+		&__label
+			display: inline-block
+			font-size: .9rem
+			line-height: 2.4rem
+			padding-left: 2.5rem
+			&::before
+				content: ''
+				display: block
+				width: 1.4rem
+				height: 1.4rem
+				top: .4rem
+			&::after
+				width: 1.4rem
+				font-size: 1rem
+
+	.price
+		padding: 2rem 1.5rem
+		.title
+			margin-bottom: 2.4rem
+		&-content
+			display: grid
+			grid-template-columns: repeat(5, 1fr)
+			&__header
+				padding: 1rem .3rem 0
+				align-items: flex-start
+				font-size: .7rem
+				line-height: 1.2rem
+				text-align: center
+			&__left
+				padding: .8rem .6rem 
+				font-size: 1.3rem
+			&__item
+				padding-left: .6rem
+				font-size: .8rem
+				line-height: 1.1rem
+	// --price
+
+	.calc
+		padding: 2rem 1.5rem
+		& .title
+			margin-bottom: 2.4rem
+		&__content
+			flex-direction: column
+			gap: 5rem
+		&-left
+			width: 100%
+			gap: 1.6rem
+			&__label
+				margin-bottom: .6rem
+				font-size: .9rem
+			&__input
+				width: 100%
+				padding: .75rem .85rem .9rem
+				font-size: 1rem
+			&__select::after
+				font-size: .8rem
+				top: .8rem
+				right: 1.5rem
+			&__wrap
+				position: relative
+			&__slider
+				width: 100%
+				height: 2px
+				background-color: #E1E1E1
+				position: absolute
+				bottom: 0
+				left: 0
+	// calc-left
+
+	.calc-right
+		width: 100%
+		padding: 2rem
+		&__title
+			margin-bottom: 1.2rem
+			font-size: 1.8rem
+			line-height: 1.2
+		&__item
+			padding: 1.2rem 0
+		&__text
+			max-width: 75%
+			font-size: 1.1rem
+			line-height: 1.5
+			span
+				max-width: 100%
+				font-size: .75rem
+				line-height: 1.1rem
+		& .btn
+			width: 100%
+			margin-top: .8rem
+	// calc-right
+
+	.work
+		padding: 2rem 1.5rem
+		& .title
+			margin-bottom: 2.4rem
+		&__wrap
+			display: flex
+			flex-direction: column
+			gap: 3.1rem
+		&-card
+			width: 100%
+			padding: 2rem
+			padding-bottom: 5rem
+			&__top
+				margin-bottom: 2.4rem
+			&__icon
+				font-size: 4.8rem
+			&__time
+				font-size: 1.2rem
+				&::after
+					width: 3.5rem
+					height: 1.4rem
+					margin-top: 1.2rem
+			&__title
+				font-size: 1.8rem
+				line-height: 2.2rem
+				margin-bottom: 2rem
+			&__text
+				font-size: 1.2rem
+				line-height: 1.4
+				&_m
+					margin-top: 1rem
+					font-size: 1rem
+	// work
+
+	.advantage
+		padding: 2rem
+		.title
+			margin-bottom: 2.4rem
+		&-card
+			width: 100%
+			padding: 1.5rem
+			&__icon
+				font-size: 3.6rem
+			&__title
+				margin-bottom: 1.2rem
+			&__text
+				font-size: 1.2rem
+	// advantage
+
+	.certificate
+		width: 100%
+		padding: 2rem
+		.title
+			max-width: 80%
+			font-size: 2rem
+			margin-bottom: 2.4rem
+			margin-left: 0
+		&__item:first-child
+			margin-left: 6rem
+		&__img
+			width: 16rem
+			padding: 1.4rem 1rem
+		& .btn-prev
+			top: 4rem
+			right: 5.5rem
+		& .btn-next
+			top: 4rem
+			right: 1.9rem
+	.btn-prev, .btn-next
+		width: 3rem
+		height: 3rem
+		&::after
+			font-size: 1.2rem
+	.btn-prev
+		&::after
+			transform: rotate(90deg)
+	.btn-next::after
+		transform: rotate(-90deg)
+	// certificate
+
+	.partners
+		width: 100%
+		padding: 2rem
+		.title
+			margin-bottom: 1.4rem
+		&__content
+			padding-bottom: 4.8rem
+			margin-bottom: 2rem
+		&__img
+			width: 50%
+			margin-left: 20%
+		&__pagination
+			margin-bottom: 1rem
+		&__pagination .swiper-pagination-bullet
+			margin-right: .5rem !important
+	// partners
+
+	.reviews
+		padding: 2rem
+		&__content
+			width: 25rem
+		& .title
+			margin-bottom: 2.4rem
+		&__item
+			min-height: 100%
+			padding: 1rem
+			padding-bottom: 4rem
+		&__name
+			margin-bottom: 2rem
+			font-size: 1.1rem
+			line-height: 1.4rem
+			& span
+				display: block
+				max-width: 40%
+				margin-top: .8rem
+				font-size: .8rem
+				line-height: 1.1
+		&__text
+			font-size: 1.1rem
+
+		&__link
+			font-size: 1.2rem
+			bottom: 1rem
+		& .btn-prev
+			top: 3rem
+			right: 7rem
+			left: auto
+		& .btn-next
+			top: 3rem
+			right: 3.5rem
+
+		& .btn
+			width: 100%
+			margin-top: 2.5rem
+	// reviews
+
+	.feedback
+		padding: 2rem
+		&__title
+			font-size: 2.2rem
+			font-weight: 700
+			margin-bottom: 2rem
+		&__text
+			max-width: 85%
+			margin-bottom: 2rem
+			font-size: 1.1rem
+		&-form
+			flex-direction: column
+			gap: 2rem
+			width: 100%
+			&__input
+				width: 100%
+				padding: .8rem
+				font-size: 1.2rem
+		.btn
+			width: 100%
+		&__bot-text
+			margin-top: 2rem
+			font-size: 1.3rem
+		&__link
+			font-size: inherit
+			color: inherit
+			border-bottom: 1px solid #fff
+	// .feedback
+
+	.footer
+		height: auto
+		padding: 2rem
+		&__content
+			flex-direction: column
+			padding-bottom: 4rem
+			gap: 2rem
+		&__item
+			display: flex
+			flex-direction: column
+			flex-basis: 100%
+			gap: 0.5rem
+			align-items: center
+			&:first-child
+				flex-basis: 100%
+		&__logo
+			width: 20rem
+		&__logo-span
+			margin-top: .5rem
+		&__link
+			font-size: 1.2rem
+		&__sales
+			font-size: 1.3rem
+		&__sales-tel
+			font-size: 1.6rem
+		&__bottom
+			width: 100%
+			padding-left: 0
+			text-align: center
